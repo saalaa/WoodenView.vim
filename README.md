@@ -25,7 +25,7 @@ With the above setup you'll be able to perform two things:
 
 - Press `space l` to split the window vertically or horizontally, depending on
   available space (using `testwidth` and `numberwidth`).
-- Press `space j` will swtich buffers between the current window and the main
+- Press `space j` to swtich buffers between the current window and the main
   (top left) window.
 
 That's it.
