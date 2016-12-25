@@ -12,7 +12,7 @@ No other mean of installation than Pathogen has been tested.
 
 You'll certainly want to map commands exported by the plugin:
 
-    # You'll need to define a mapleader.
+    " You'll need to define a mapleader.
     let mapleader = "\<Space>"
 
     nmap <silent> <leader>l <Plug>WoodenViewSplit
