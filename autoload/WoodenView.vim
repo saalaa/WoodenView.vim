@@ -26,6 +26,24 @@ function! WoodenView#go_to_previous()
   exec 'wincmd p'
 endfunction
 
+function! WoodenView#center_view()
+  silent normal zz
+endfunction
+
+function! WoodenView#jump_to_line(line)
+  exec ':' a:line
+endfunction
+
+function! WoodenView#switch_to_buffer(buffer)
+  exec 'buffer' a:buffer
+endfunction
+
+function! WoodenView#switch_jump_center(buffer, line)
+  call WoodenView#switch_to_buffer(a:buffer)
+  call WoodenView#jump_to_line(a:line)
+  call WoodenView#center_view()
+endfunction
+
 function! WoodenView#Split()
   let buffer = bufnr('%')
   let window = bufwinnr(buffer)
@@ -47,16 +65,18 @@ endfunction
 
 function! WoodenView#SwitchMain()
   let new_buffer = bufnr('%')
+  let new_line = line('.')
 
   call WoodenView#go_to_main()
 
   let old_buffer = bufnr('%')
+  let old_line = line('.')
 
-  exec 'buffer' new_buffer
+  call WoodenView#switch_jump_center(new_buffer, new_line)
 
   call WoodenView#go_to_previous()
 
-  exec 'buffer' old_buffer
+  call WoodenView#switch_jump_center(old_buffer, old_line)
 
   call WoodenView#go_to_main()
 endfunction
