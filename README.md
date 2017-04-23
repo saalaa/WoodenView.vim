@@ -5,7 +5,7 @@ Simple and stupid Vim plugin to handle window splits.
 
 ## Installation
 
-No other mean of installation than Pathogen has been tested.
+    plug 'saalaa/WoodenView.vim'
 
 
 ## Configuration
@@ -35,7 +35,7 @@ That's it.
 ## Preview
 
 <center>
-![Preview](https://github.com/saalaa/WoodenView.vim/raw/master/preview.gif)
+<img src="https://github.com/saalaa/WoodenView.vim/raw/master/preview.gif">
 </center>
 
 
